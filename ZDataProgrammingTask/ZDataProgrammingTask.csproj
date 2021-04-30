@@ -19,11 +19,13 @@
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
     <None Include="ClientApp\src\api\agent.ts" />
+    <None Include="ClientApp\src\components\Form.tsx" />
+    <None Include="ClientApp\src\components\FormInput.tsx" />
+    <None Include="ClientApp\src\components\InputAmount.tsx" />
+    <None Include="ClientApp\src\components\InputComponent.tsx" />
+    <None Include="ClientApp\src\components\PageHeading.tsx" />
+    <None Include="ClientApp\src\components\YearInput.tsx" />
     <None Include="ClientApp\src\models\Loan.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ClientApp\src\components" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
