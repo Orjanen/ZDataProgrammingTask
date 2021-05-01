@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ZDataProgrammingTask.Data;
+using ZDataProgrammingTask.Services;
 
 namespace ZDataProgrammingTask
 {
@@ -36,6 +37,10 @@ namespace ZDataProgrammingTask
             {
                 opt.UseSqlite(_config.GetConnectionString("DefaultConnection"));
             });
+
+            services.AddScoped<ILoanTypeRepository, LoanTypeRepository>();
+
+            services.AddScoped<ILoanTypeService, LoanTypeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
