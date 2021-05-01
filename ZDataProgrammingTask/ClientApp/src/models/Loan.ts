@@ -1,6 +1,6 @@
 
 export interface ILoan {
-    loanId: string
-    loanType: string
+    Id: string
+    loanName: string
     interestRate: Number
 }

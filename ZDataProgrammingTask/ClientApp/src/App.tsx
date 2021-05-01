@@ -6,19 +6,21 @@ import CalculatorForm from "./components/CalcualtorForm";
 import agent from "./api/agent";
 
 const App = () => {
-
     const [loanTypes, setLoanTypes] = useState([])
-
-
+    
     const getLoanTypes = async () =>{
         try {
             setLoanTypes(await agent.Loan.getDifferentLoanTypes())
         }catch (e) {
             throw e
         }
-        
     }
     
+    const onSelect = (id: string) => {
+        if (id) {
+           
+        }
+    }
     useEffect(() => {
         getLoanTypes()
     }, [])
@@ -30,7 +32,7 @@ const App = () => {
                     <PageHeading
                         headingText={'Loan calculator'}/>
                 </Center>
-                <CalculatorForm/>
+                <CalculatorForm data={loanTypes}/>
             </VStack>
          
         </Container>
