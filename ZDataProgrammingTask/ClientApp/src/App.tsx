@@ -1,25 +1,39 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {Center, Container, VStack} from "@chakra-ui/react";
+
+import PageHeading from "./components/PageHeading";
+import CalculatorForm from "./components/CalcualtorForm";
 import agent from "./api/agent";
 
-import { Button, Center } from "@chakra-ui/react"
+const App = () => {
 
-function App() {
+    const [loanTypes, setLoanTypes] = useState([])
 
-    const getTest = async() => {
+
+    const getLoanTypes = async () =>{
         try {
-            const data = await agent.WeatherForecast.getWeatherForecast()
-            console.log(data)
+            setLoanTypes(await agent.Loan.getDifferentLoanTypes())
         }catch (e) {
-            console.log('getTest not working')
             throw e
         }
+        
     }
+    
+    useEffect(() => {
+        getLoanTypes()
+    }, [])
+    
     return (
-        <Center>
-            <Button
-                onClick={() => getTest()}
-            > test</Button>
-        </Center>
+        <Container>
+            <VStack>
+                <Center style={{marginTop: '50px'}}>
+                    <PageHeading
+                        headingText={'Loan calculator'}/>
+                </Center>
+                <CalculatorForm/>
+            </VStack>
+         
+        </Container>
     );
 }
 

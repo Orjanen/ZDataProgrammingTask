@@ -1,6 +1,6 @@
 import axios, {AxiosResponse} from 'axios'
 
-axios.defaults.baseURL = '/'
+axios.defaults.baseURL = '/api'
 
 const responseBody = (response: AxiosResponse) => response.data
 
@@ -11,10 +11,10 @@ const requests = {
     del: (url: string) => axios.delete(url).then(responseBody)
 };
 
-const WeatherForecast = {
-    getWeatherForecast: () => requests.get('/WeatherForecast')
+const Loan = {
+    getDifferentLoanTypes: () => requests.get('/loan')
 }
 
 export default {
-    WeatherForecast
+    Loan
 }
