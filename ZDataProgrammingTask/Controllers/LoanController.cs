@@ -20,5 +20,17 @@ namespace ZDataProgrammingTask.Controllers
         {
             return _loanTypeService.GetLoanTypes();
         }
-    }
+
+        [HttpPost]
+        public ActionResult<CalculationResponse> CalculatePaymentPlan([FromBody] CalculationRequest data)
+        {
+            var response = _loanTypeService.CalculatePaymentPlan(data);
+
+            if (response == null)
+            {
+                return BadRequest(new {message = "Can't calculate the values"});
+            }
+            return response;
+        }
+    } 
 }

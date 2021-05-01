@@ -26,6 +26,7 @@
     <None Include="ClientApp\src\api\agent.ts" />
     <None Include="ClientApp\src\components\InputComponent.tsx" />
     <None Include="ClientApp\src\components\PageHeading.tsx" />
+    <None Include="ClientApp\src\components\SelectComponent.tsx" />
     <None Include="ClientApp\src\models\Loan.ts" />
   </ItemGroup>
 

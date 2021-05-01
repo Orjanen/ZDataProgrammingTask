@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using ZDataProgrammingTask.Data;
 using ZDataProgrammingTask.Models;
@@ -16,6 +17,17 @@ namespace ZDataProgrammingTask.Services
         public List<LoanType> GetLoanTypes()
         {
             return _loanRepo.FindAllLoanTypes();
+        }
+
+        public CalculationResponse CalculatePaymentPlan(CalculationRequest data)
+        {
+            var loanAmount = data.Loan;
+            var interestRatePerPeriod = data.InterestRate;
+            var numbersOfPaymentPeriod = data.Years * 12;
+
+            
+
+            return null;
         }
     }
 }

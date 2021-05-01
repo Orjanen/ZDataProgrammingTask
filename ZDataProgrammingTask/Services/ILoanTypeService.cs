@@ -6,5 +6,7 @@ namespace ZDataProgrammingTask.Services
     public interface ILoanTypeService
     {
         List<LoanType> GetLoanTypes();
+
+        CalculationResponse CalculatePaymentPlan(CalculationRequest data);
     }
 }
