@@ -6,7 +6,7 @@ namespace ZDataProgrammingTask.Models
         public double Principal { get; set; }
         public double Payment { get; set; }
         public double Interest { get; set; }
-        public double TotalInterestPayed { get; set; }
+        public double TotalInterestPaid { get; set; }
         public double Balance { get; set; }
         
     }

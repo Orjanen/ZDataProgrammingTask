@@ -35,23 +35,23 @@ namespace ZDataProgrammingTask.Services
             
             //Create payment plan
             List<CalculationResponse> paymentPlan = new List<CalculationResponse>();
-            var totalInterestPayed = 0.0;
+            var totalInterestPaid = 0.0;
             
             for (int i = 0; i < numbersOfPaymentPeriod; i++)
             {
                 var interestAmount = amount * interestRatePerPeriod;
-                totalInterestPayed += interestAmount;
+                totalInterestPaid += interestAmount;
                 var downPayment = monthlyPayment - interestAmount;
                 amount = amount - downPayment;
                 
                 CalculationResponse response = new CalculationResponse()
                 {
                     Month = i + 1,
-                    Interest = interestAmount,
-                    Payment = monthlyPayment,
-                    Principal = downPayment,
-                    Balance = amount,
-                    TotalInterestPayed = totalInterestPayed
+                    Interest = Math.Round(interestAmount, 2),
+                    Payment = Math.Round(monthlyPayment, 2),
+                    Principal = Math.Round(downPayment, 2),
+                    Balance = Math.Round(amount, 2),
+                    TotalInterestPaid = Math.Round(totalInterestPaid, 2)
                 };
                 
                 paymentPlan.Add(response);
