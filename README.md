@@ -1,0 +1,3 @@
+# ZDataProgrammingTask
+
+![sentiment](ZdataQuickPlan.jpg)
