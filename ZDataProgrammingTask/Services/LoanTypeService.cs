@@ -32,18 +32,18 @@ namespace ZDataProgrammingTask.Services
             var denominator = Math.Pow((1 + interestRatePerPeriod), numbersOfPaymentPeriod) - 1;
 
             var monthlyPayment = amount * (numerator / denominator);
-            
+
             //Create payment plan
             List<CalculationResponse> paymentPlan = new List<CalculationResponse>();
             var totalInterestPaid = 0.0;
-            
+
             for (int i = 0; i < numbersOfPaymentPeriod; i++)
             {
                 var interestAmount = amount * interestRatePerPeriod;
                 totalInterestPaid += interestAmount;
                 var downPayment = monthlyPayment - interestAmount;
                 amount = amount - downPayment;
-                
+
                 CalculationResponse response = new CalculationResponse()
                 {
                     Month = i + 1,
@@ -53,9 +53,10 @@ namespace ZDataProgrammingTask.Services
                     Balance = Math.Round(amount, 2),
                     TotalInterestPaid = Math.Round(totalInterestPaid, 2)
                 };
-                
+
                 paymentPlan.Add(response);
             }
+
             return paymentPlan;
         }
     }

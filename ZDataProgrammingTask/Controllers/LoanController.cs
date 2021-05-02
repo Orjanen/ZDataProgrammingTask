@@ -5,7 +5,6 @@ using ZDataProgrammingTask.Services;
 
 namespace ZDataProgrammingTask.Controllers
 {
-  
     public class LoanController : BaseApiController
     {
         private readonly ILoanTypeService _loanTypeService;
@@ -22,7 +21,7 @@ namespace ZDataProgrammingTask.Controllers
         }
 
         [HttpPost]
-        public ActionResult<List<CalculationResponse>>CalculatePaymentPlan([FromBody] CalculationRequest data)
+        public ActionResult<List<CalculationResponse>> CalculatePaymentPlan([FromBody] CalculationRequest data)
         {
             var response = _loanTypeService.CalculatePaymentPlan(data);
 
@@ -30,7 +29,8 @@ namespace ZDataProgrammingTask.Controllers
             {
                 return BadRequest(new {message = "Can't calculate the values"});
             }
+
             return response;
         }
-    } 
+    }
 }

@@ -8,6 +8,5 @@ namespace ZDataProgrammingTask.Models
         public double Interest { get; set; }
         public double TotalInterestPaid { get; set; }
         public double Balance { get; set; }
-        
     }
 }
