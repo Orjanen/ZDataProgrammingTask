@@ -22,7 +22,7 @@ namespace ZDataProgrammingTask.Controllers
         }
 
         [HttpPost]
-        public ActionResult<CalculationResponse> CalculatePaymentPlan([FromBody] CalculationRequest data)
+        public ActionResult<List<CalculationResponse>>CalculatePaymentPlan([FromBody] CalculationRequest data)
         {
             var response = _loanTypeService.CalculatePaymentPlan(data);
 

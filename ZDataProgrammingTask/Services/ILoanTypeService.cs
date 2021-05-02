@@ -7,6 +7,6 @@ namespace ZDataProgrammingTask.Services
     {
         List<LoanType> GetLoanTypes();
 
-        CalculationResponse CalculatePaymentPlan(CalculationRequest data);
+        List<CalculationResponse> CalculatePaymentPlan(CalculationRequest data);
     }
 }
