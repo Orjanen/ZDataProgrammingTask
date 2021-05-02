@@ -26,8 +26,10 @@
     <None Include="ClientApp\src\api\agent.ts" />
     <None Include="ClientApp\src\components\InputComponent.tsx" />
     <None Include="ClientApp\src\components\PageHeading.tsx" />
+    <None Include="ClientApp\src\components\PaymentPlanTable.tsx" />
     <None Include="ClientApp\src\components\SelectComponent.tsx" />
     <None Include="ClientApp\src\models\Loan.ts" />
+    <None Include="ClientApp\src\models\paymentPlanItem.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
