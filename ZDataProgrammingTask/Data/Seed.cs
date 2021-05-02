@@ -15,7 +15,7 @@ namespace ZDataProgrammingTask.Data
             {
                 new LoanType
                 {
-                    LoanName = "Hoasing Loan",
+                    LoanName = "Housing loan",
                     InterestRate = 3.5
                 },
             };
