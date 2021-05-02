@@ -15,17 +15,17 @@ namespace ZDataProgrammingTask.Data
             {
                 new LoanType
                 {
-                    LoanName = "Mortgage",
+                    LoanName = "LoanType 1",
                     InterestRate = 3.5
                 },
                 new LoanType
                 {
-                    LoanName = "Car loan",
+                    LoanName = "LoanType 2",
                     InterestRate = 3.5
                 },
                 new LoanType
                 {
-                    LoanName = "Study loans",
+                    LoanName = "LoanType 3",
                     InterestRate = 3.5
                 },
             };
