@@ -1,4 +1,5 @@
 import axios, {AxiosResponse} from 'axios'
+import {IPaymentPlanItem} from "../models/paymentPlanItem";
 
 axios.defaults.baseURL = '/api'
 
@@ -12,7 +13,8 @@ const requests = {
 };
 
 const Loan = {
-    getDifferentLoanTypes: () => requests.get('/loan')
+    getDifferentLoanTypes: () => requests.get('/loan'),
+    getPaymentPlan: (formData:any): Promise<IPaymentPlanItem []> => requests.post('/loan', formData),
 }
 
 export default {

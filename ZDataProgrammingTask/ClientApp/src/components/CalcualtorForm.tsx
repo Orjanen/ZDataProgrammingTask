@@ -5,23 +5,17 @@ import {Button} from '@chakra-ui/react'
 import InputComponent from "./InputComponent";
 import SelectComponent from "./SelectComponent";
 import {ILoan} from "../models/Loan";
+import agent from "../api/agent";
 
 interface Props {
     data: ILoan [] | undefined
+    onSubmitHandler: Function
+    onSelect : Function
 }
 
-const CalculatorForm: React.FC<Props> = ({data}) => {
-    const [selectedLoan, setSelectedLoan] = useState()
+const CalculatorForm: React.FC<Props> = ({data,onSubmitHandler, onSelect}) => {
 
-    const onSelect = (value: any) => {
-        setSelectedLoan(value)
-    }
-
-    const onSubmitHandler = (values: any) => {
-        values.SelectedLoan = selectedLoan || 'Mortgage'
-        console.log(values)
-    }
-         
+    
     return (
         <Formik
             initialValues={{Years: '', Loan: '', SelectedLoan: '', InterestRate: 3.5}}
