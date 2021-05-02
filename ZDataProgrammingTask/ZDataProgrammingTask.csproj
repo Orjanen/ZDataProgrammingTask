@@ -24,6 +24,7 @@
     <None Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
     <None Include="ClientApp\src\api\agent.ts" />
+    <None Include="ClientApp\src\components\DisplayLoanDetails.tsx" />
     <None Include="ClientApp\src\components\InputComponent.tsx" />
     <None Include="ClientApp\src\components\PageHeading.tsx" />
     <None Include="ClientApp\src\components\PaymentPlanTable.tsx" />
