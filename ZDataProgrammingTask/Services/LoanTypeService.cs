@@ -26,10 +26,8 @@ namespace ZDataProgrammingTask.Services
             var interestRatePerPeriod = (data.InterestRate / 100) / 12;
             var numbersOfPaymentPeriod = data.Years * 12;
 
-            var numerator = interestRatePerPeriod * Math.Pow((1 + interestRatePerPeriod), numbersOfPaymentPeriod);
-            var denominator = Math.Pow((1 + interestRatePerPeriod), numbersOfPaymentPeriod) - 1;
-
-            var monthlyPayment = amount * (numerator / denominator);
+            var monthlyPayment = Utility.CalculateMonhlyPayment.calculateMonhlyPayment(interestRatePerPeriod, 
+                numbersOfPaymentPeriod, amount);
 
             //Create payment plan
             List<CalculationResponse> paymentPlan = new List<CalculationResponse>();

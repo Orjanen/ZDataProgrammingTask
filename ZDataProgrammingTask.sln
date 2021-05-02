@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.808.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZDataProgrammingTask", "ZDataProgrammingTask\ZDataProgrammingTask.csproj", "{767ACF59-7868-4636-A5D6-9095AEEB69A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProjectZDataCalculator", "TestProjectZDataCalculator\TestProjectZDataCalculator.csproj", "{B65555A9-812B-4656-9427-DA9A4F7508DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{767ACF59-7868-4636-A5D6-9095AEEB69A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{767ACF59-7868-4636-A5D6-9095AEEB69A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{767ACF59-7868-4636-A5D6-9095AEEB69A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B65555A9-812B-4656-9427-DA9A4F7508DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B65555A9-812B-4656-9427-DA9A4F7508DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B65555A9-812B-4656-9427-DA9A4F7508DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B65555A9-812B-4656-9427-DA9A4F7508DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
