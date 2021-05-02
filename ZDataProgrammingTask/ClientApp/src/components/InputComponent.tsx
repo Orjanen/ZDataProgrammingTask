@@ -1,6 +1,6 @@
 import React from 'react'
-import { useField } from 'formik'
-import { FormControl, FormErrorMessage, Input } from '@chakra-ui/react'
+import {useField} from 'formik'
+import {FormControl, FormErrorMessage, Input} from '@chakra-ui/react'
 
 interface Props {
     placeholder: string

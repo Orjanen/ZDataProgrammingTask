@@ -15,11 +15,11 @@ const App = () => {
     useEffect(() => {
         getLoanTypes()
     }, [])
-    
-    const getLoanTypes = async () =>{
+
+    const getLoanTypes = async () => {
         try {
             setLoanTypes(await agent.Loan.getDifferentLoanTypes())
-        }catch (e) {
+        } catch (e) {
             throw e
         }
     }
@@ -32,12 +32,12 @@ const App = () => {
         try {
             const response = await agent.Loan.getPaymentPlan(values)
             setPaymentPlan(response)
-        }catch (e){
+        } catch (e) {
             console.log('Can not fetch a payment plan')
             throw e
         }
     }
-    
+
     return (
         <Container>
             <VStack>
@@ -46,11 +46,15 @@ const App = () => {
                         headingText={'Loan calculator'}/>
                 </Center>
                 <CalculatorForm data={loanTypes} onSubmitHandler={onSubmitHandler} onSelect={onSelect}/>
-                <Divider orientation="horizontal" />
+                <Divider orientation="horizontal"/>
+                <Center style={{marginTop: '50px'}}>
+                    <PageHeading
+                        headingText={'Payment plan'}/>
+                </Center>
                 {paymentPlan && <PaymentPlanTable paymentPlan={paymentPlan}/>}
-                
+
             </VStack>
-         
+
         </Container>
     );
 }

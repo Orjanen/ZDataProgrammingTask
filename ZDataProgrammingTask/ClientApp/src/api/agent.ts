@@ -14,7 +14,7 @@ const requests = {
 
 const Loan = {
     getDifferentLoanTypes: () => requests.get('/loan'),
-    getPaymentPlan: (formData:any): Promise<IPaymentPlanItem []> => requests.post('/loan', formData),
+    getPaymentPlan: (formData: any): Promise<IPaymentPlanItem []> => requests.post('/loan', formData),
 }
 
 export default {

@@ -10,13 +10,13 @@ interface Props {
 
 const SelectComponent: React.FC<Props> = ({data, onSelect}) => {
     return (
-            <Select onChange={(e) => onSelect(e.target.value)}>
-                {data!.map((loanType:ILoan) => (
-                    <option key={loanType.loanName} value={loanType.Id} >
-                        {loanType.loanName}
-                    </option>
-                ))}
-            </Select>
+        <Select onChange={(e) => onSelect(e.target.value)}>
+            {data!.map((loanType: ILoan) => (
+                <option key={loanType.loanName} value={loanType.Id}>
+                    {loanType.loanName}
+                </option>
+            ))}
+        </Select>
     );
 }
 
